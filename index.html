@@ -39,12 +39,27 @@
             <p>Dirección: Av. 16 de Julio #456, La Paz.</p>
             <p>Horarios: lunes a sábado, de 8:30 a 18:30.</p>
             <p>WhatsApp: 00000000</p>
-        </section>
 
-        </section>
+            <h3>Envianos tu consulta</h3>
+            <form class="form-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
 
-        <section id="">
-            
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje o consulta:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe la falla de tu equipo..." required></textarea>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+
         </section>
 
     </main>
