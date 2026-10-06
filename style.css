@@ -1,7 +1,13 @@
 body {
-    background-color: #f8fafc;
+    background-color: #c7d6e6;
     color: #334155;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     line-height: 1.6;
+}
+
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 15px 20px;
 }
