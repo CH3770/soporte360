@@ -9,3 +9,12 @@ btnTheme.addEventListener('click', () => {
         btnTheme.textContent = '🌙';
     }
 });
+
+const btnHamburger = document.getElementById('btn-hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+if (btnHamburger && navMenu) {
+    btnHamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+}
