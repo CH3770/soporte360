@@ -167,3 +167,21 @@ body.modo-ocuro #btn-theme {
     background-color: #0284c7;
     color: #ffffff;
 }
+
+body.modo-ocuro .form-contacto button {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body.modo-ocuro .form-contacto button:hover {
+    background-color: #e2e8f0;
+}
+
+body.modo-ocuro #btn-theme {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body.modo-ocuro #btn-theme:hover {
+    background-color: #e2e8f0;
+}
