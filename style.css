@@ -128,3 +128,42 @@ footer {
         padding: 16px;
     }
 }
+
+#btn-theme {
+    display: block;
+    margin-left: auto;
+    background-color: #334155;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#btn-theme:hover {
+    background-color:#0284c7;
+}
+body.modo-ocuro {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+body.modo-ocuro .tarjeta {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+body.modo-ocuro h1,
+body.modo-ocuro h2,
+body.modo-ocuro h3,
+body.modo-ocuro .campo label {color: #f8fafc;}
+body.modo-ocuro .form-contacto input,
+body.modo-ocuro .form-contacto textarea {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-color: #334155;
+}
+body.modo-ocuro #btn-theme {
+    background-color: #0284c7;
+    color: #ffffff;
+}
