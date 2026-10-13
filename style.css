@@ -205,7 +205,6 @@ body.modo-ocuro #btn-theme:hover {
         width: 100%;
     }
 
-    /* Muestra el menú cuando tiene la clase active */
     nav.active {
         display: block !important;
     }
