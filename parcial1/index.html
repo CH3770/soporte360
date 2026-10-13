@@ -16,3 +16,45 @@
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
+
+    <main>
+        <section id="arreglos">
+            <h2>Nuestros arreglos</h2>
+            <p>Somos una floreria de barrio dedicada a ofrecer los arreglos florales mas frescos y hermosos para cualquier ocasion especial que tengas.</p>
+            <ul>
+                <li>Ramo de rosas - Bs 60</li>
+                <li>Ramo de girasoles - Bs 35</li>
+                <li>Planta en maceta - Bs 20</li>
+            </ul>
+        </section>
+
+        <section id="contacto">
+            <h2>Encarga tus flores</h2>
+            <form>
+                <div>
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" required>
+                </div>
+
+                <div>
+                    <label for="detalle">Detalle del pedido:</label>
+                    <textarea id="detalle"></textarea>
+                </div>
+            </form>
+
+            <button type="button" id="btn-confirmar">Hacer mi pedido</button>
+            <p id="mensaje" class="oculto"></p>
+        </section>
+    </main>
+    <footer>
+        <p>Parcial 1 - Marcelo Ruben Mamani Venegas - 12 de octubre de 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
