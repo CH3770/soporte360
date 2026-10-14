@@ -35,15 +35,15 @@ function revisarContacto(event) {
         avisoContacto.classList.add("error");
         avisoContacto.classList.remove("exito");
     } else if (correo === "") {
-        avisoContacto.textContent = "Estimado cliente, falta tu correo electrónico.";
+        avisoContacto.textContent = "Estimado cliente, falta su correo electrónico.";
         avisoContacto.classList.add("error");
         avisoContacto.classList.remove("exito");
     } else if (correo.includes("@") === false) {
-        avisoContacto.textContent = "Estimado cliente, el correo no parece válido, le falta el @.";
+        avisoContacto.textContent = "Estimado cliente, su correo no es válido (falta el @).";
         avisoContacto.classList.add("error");
         avisoContacto.classList.remove("exito");
     } else if (mensaje === "") {
-        avisoContacto.textContent = "Estimado cliente, falta el mensaje o detalle de tu consulta.";
+        avisoContacto.textContent = "Estimado cliente, falta describir su consulta.";
         avisoContacto.classList.add("error");
         avisoContacto.classList.remove("exito");
     } else {
@@ -54,4 +54,6 @@ function revisarContacto(event) {
     }
 }
 
-formularioContacto.addEventListener("submit", revisarContacto);
+if (formularioContacto && avisoContacto) {
+    formularioContacto.addEventListener("submit", revisarContacto);
+}
