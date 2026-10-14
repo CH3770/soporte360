@@ -46,7 +46,7 @@
 
             <h3>Envianos tu consulta</h3>
             
-            <form class="form-contacto">
+            <form id="form-contacto" novalidate>
                 <div class="campo">
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
@@ -63,6 +63,8 @@
                 </div>
 
                 <button type="submit">Enviar mensaje</button>
+
+                <p id="aviso-contacto" class="aviso"></p>
             </form>
 
         </section>

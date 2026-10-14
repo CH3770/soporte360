@@ -223,3 +223,50 @@ body.modo-ocuro #btn-theme:hover {
 body.modo-ocuro .hamburger {
     color: #ffffff;
 }
+
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+#form-contacto button {
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+#form-contacto button:hover {
+    background-color: #0284c7;
+}
+
+.aviso {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.aviso.exito {
+    color: #16a34a;
+}
+
+.aviso.error {
+    color: #dc2626;
+}
+
+body.modo-ocuro #form-contacto button {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body.modo-ocuro #form-contacto button:hover {
+    background-color: #e2e8f0;
+}
