@@ -20,33 +20,38 @@ if (btnHamburger && navMenu) {
 }
 
 // formulario
-const formContacto = document.getElementById('form-contacto');
-const avisoContacto = document.getElementById('aviso-contacto');
+const formularioContacto = document.querySelector("#form-contacto");
+const avisoContacto = document.querySelector("#aviso-contacto");
 
-if (formContacto && avisoContacto) {
-    formContacto.addEventListener('submit', (e) => {
-        e.preventDefault();
+function revisarContacto(event) {
+    event.preventDefault();
+    
+    const nombre = document.querySelector("#nombre").value;
+    const correo = document.querySelector("#correo").value;
+    const mensaje = document.querySelector("#mensaje").value;
 
-        const nombre = document.getElementById('nombre').value.trim();
-        const correo = document.getElementById('correo').value.trim();
-        const mensaje = document.getElementById('mensaje').value.trim();
-
-        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (nombre === '' || correo === '' || mensaje === '') {
-            avisoContacto.textContent = 'Por favor, completa todos los campos requeridos.';
-            avisoContacto.className = 'aviso error';
-            return;
-        }
-
-        if (!regexCorreo.test(correo)) {
-            avisoContacto.textContent = 'Por favor, ingresa un correo electrónico válido (ej. usuario@dominio.com).';
-            avisoContacto.className = 'aviso error';
-            return;
-        }
-
-        avisoContacto.textContent = '¡Gracias por escribirnos! Te responderemos a la brevedad.';
-        avisoContacto.className = 'aviso exito';
-        formContacto.reset();
-    });
+    if (nombre === "") {
+        avisoContacto.textContent = "Estimado cliente, falta su nombre completo.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else if (correo === "") {
+        avisoContacto.textContent = "Estimado cliente, falta tu correo electrónico.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else if (correo.includes("@") === false) {
+        avisoContacto.textContent = "Estimado cliente, el correo no parece válido, le falta el @.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else if (mensaje === "") {
+        avisoContacto.textContent = "Estimado cliente, falta el mensaje o detalle de tu consulta.";
+        avisoContacto.classList.add("error");
+        avisoContacto.classList.remove("exito");
+    } else {
+        avisoContacto.textContent = "Estimado cliente, su consulta ha sido recibida. Te responderemos pronto.";
+        avisoContacto.classList.add("exito");
+        avisoContacto.classList.remove("error");
+        formularioContacto.reset();
+    }
 }
+
+formularioContacto.addEventListener("submit", revisarContacto);

@@ -249,24 +249,34 @@ body.modo-ocuro .hamburger {
 }
 
 .aviso {
-    margin-top: 10px;
-    font-weight: bold;
+    margin-top: 15px;
+    padding: 10px 14px;
+    border-radius: 6px;
     font-size: 0.95rem;
-}
-
-.aviso.exito {
-    color: #334155;
+    font-weight: bold;
+    display: block;
 }
 
 .aviso.error {
-    color: #0f172a;
+    background-color: #fef2f2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
 }
 
-body.modo-ocuro #form-contacto button {
-    background-color: #f8fafc;
-    color: #0f172a;
+.aviso.exito {
+    background-color: #f0fdf4;
+    border: 1px solid #86efac;
+    color: #166534;
 }
 
-body.modo-ocuro #form-contacto button:hover {
-    background-color: #e2e8f0;
+body.modo-ocuro .aviso.error {
+    background-color: #451a1a;
+    border-color: #991b1b;
+    color: #fca5a5;
+}
+
+body.modo-ocuro .aviso.exito {
+    background-color: #143823;
+    border-color: #166534;
+    color: #86efac;
 }
