@@ -19,6 +19,7 @@ if (btnHamburger && navMenu) {
     });
 }
 
+// formulario
 const formContacto = document.getElementById('form-contacto');
 const avisoContacto = document.getElementById('aviso-contacto');
 
@@ -30,8 +31,16 @@ if (formContacto && avisoContacto) {
         const correo = document.getElementById('correo').value.trim();
         const mensaje = document.getElementById('mensaje').value.trim();
 
+        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (nombre === '' || correo === '' || mensaje === '') {
             avisoContacto.textContent = 'Por favor, completa todos los campos requeridos.';
+            avisoContacto.className = 'aviso error';
+            return;
+        }
+
+        if (!regexCorreo.test(correo)) {
+            avisoContacto.textContent = 'Por favor, ingresa un correo electrónico válido (ej. usuario@dominio.com).';
             avisoContacto.className = 'aviso error';
             return;
         }

@@ -86,7 +86,7 @@ main {
 }
 
 .form-contacto button {
-    background-color: #0f172a;
+    background-color: hsl(222, 47%, 11%);
     color: #ffffff;
     border: none;
     padding: 12px 20px;
@@ -255,11 +255,11 @@ body.modo-ocuro .hamburger {
 }
 
 .aviso.exito {
-    color: #16a34a;
+    color: #334155;
 }
 
 .aviso.error {
-    color: #dc2626;
+    color: #0f172a;
 }
 
 body.modo-ocuro #form-contacto button {
