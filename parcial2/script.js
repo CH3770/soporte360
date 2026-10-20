@@ -22,37 +22,31 @@ if (btnHamburger && navMenu) {
 }
 
 // formulario
-const formularioContacto = document.querySelector("#form-contacto");
-const avisoContacto = document.querySelector("#aviso-contacto");
+const formularioContacto = document.querySelector("#form-turno");
+const avisoContacto = document.querySelector("#aviso-turno");
 
 function revisarContacto(event) {
     const nombre = document.querySelector("#nombre").value.trim();
     const correo = document.querySelector("#correo").value.trim();
-    const mensaje = document.querySelector("#mensaje").value.trim();
+    const mascota = document.querySelector("#mascota").value.trim();
 
-    if (nombre === "") {
+    if (nombre === "" || correo === "") {
         event.preventDefault();
-        avisoContacto.textContent = "Estimado cliente, falta su nombre completo.";
-        avisoContacto.classList.add("error");
-        avisoContacto.classList.remove("exito");
-    } else if (correo === "") {
-        event.preventDefault();
-        avisoContacto.textContent = "Estimado cliente, falta su correo electrónico.";
+        avisoContacto.textContent = "Nos falta tu nombre y tu correo para darte el turno.";
         avisoContacto.classList.add("error");
         avisoContacto.classList.remove("exito");
     } else if (correo.includes("@") === false) {
         event.preventDefault();
-        avisoContacto.textContent = "Estimado cliente, su correo no es válido (falta el @).";
+        avisoContacto.textContent = "Revisa tu correo - le falta el arroba.";
         avisoContacto.classList.add("error");
         avisoContacto.classList.remove("exito");
-    } else if (mensaje === "") {
-        event.preventDefault();
-        avisoContacto.textContent = "Estimado cliente, falta describir su consulta.";
-        avisoContacto.classList.add("error");
-        avisoContacto.classList.remove("exito");
+    } else {
+        avisoContacto.textContent = "Turno reservado - te atiende Marcelo Ruben Mamani Venegas";
+        avisoContacto.classList.add("exito");
+        avisoContacto.classList.remove("error");
     }
 }
 
 if (formularioContacto && avisoContacto) {
     formularioContacto.addEventListener("submit", revisarContacto);
-}   formularioContacto.addEventListener("submit", revisarContacto);
+}
