@@ -1,0 +1,293 @@
+body {
+    background-color: #c7d6e6;
+    color: #334155;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 15px 20px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    word-break: break-word;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #e4dccf;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2);
+}
+
+.form-contacto button {
+    background-color: hsl(222, 47%, 11%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.form-contacto button:hover {
+    background-color: #0284c7;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    .tarjeta {
+        padding: 16px;
+    }
+}
+
+#btn-theme {
+    display: block;
+    margin-left: auto;
+    background-color: #334155;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#btn-theme:hover {
+    background-color:#0284c7;
+}
+body.modo-ocuro {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+body.modo-ocuro .tarjeta {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+body.modo-ocuro h1,
+body.modo-ocuro h2,
+body.modo-ocuro h3,
+body.modo-ocuro .campo label {color: #f8fafc;}
+body.modo-ocuro .form-contacto input,
+body.modo-ocuro .form-contacto textarea {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-color: #334155;
+}
+body.modo-ocuro #btn-theme {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+body.modo-ocuro .form-contacto button {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body.modo-ocuro .form-contacto button:hover {
+    background-color: #e2e8f0;
+}
+
+body.modo-ocuro #btn-theme {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+body.modo-ocuro #btn-theme:hover {
+    background-color: #e2e8f0;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block !important;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+body.modo-ocuro .hamburger {
+    color: #ffffff;
+}
+
+#form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+#form-contacto button {
+    background-color: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+#form-contacto button:hover {
+    background-color: #0284c7;
+}
+
+body.modo-ocuro #form-contacto button {
+    background-color: #ffffff;
+    color: #0f172a;
+}
+
+body.modo-ocuro #form-contacto button:hover {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+.aviso {
+    margin-top: 15px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    display: block;
+}
+
+.aviso.error {
+    background-color: #fef2f2;
+    border: 3px solid #fca5a5;
+    color: #0f172a;
+}
+
+.aviso.exito {
+    background-color: #f0fdf4;
+    border: 3px solid #0f172a;
+    color: #0f172a;
+}
+
+body.modo-ocuro .aviso.error {
+    background-color: #dfdfdf;
+    border: 3px solid #991b1b;
+    color: #0f172a;
+}
+
+body.modo-ocuro .aviso.exito {
+    background-color: #dfdfdf;
+    border: 3px solid #0f172a;
+    color: #0f172a;
+}
