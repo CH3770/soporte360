@@ -12,4 +12,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   echo "Correo: " . htmlspecialchars($correo) . "<br>";
   echo "Mascota: " . htmlspecialchars($mascota) . "<br>";
 }
+
+
+echo "Servicios disponibles:<br>";
+$servicios = [
+    "Consulta general    - Bs 60",
+    "Vacuna antirrabica  - Bs 40",
+    "Bano y corte        - Bs 50"
+];
+
+foreach ($servicios as $servicio) {
+    echo "- " . $servicio . "<br>";
+}
+
+echo "<br>Te atiende Marcelo Ruben Mamani Venegas";
 ?>
