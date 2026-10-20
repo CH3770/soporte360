@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte360 - Taller de Computadoras</title>
+    <title>Veterinaria Patitas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Soporte360 Computadoras</h1>
+        <h1>Veterinaria Patitas</h1>
         <button class="hamburger" id="btn-hamburger" aria-label="Abrir menú">
             ☰
         </button>
@@ -24,17 +24,17 @@
 
     <main>
         <button id="btn-theme">🌙</button>
-        <h2>Tu taller especializado en reparacion y mantenimiento de computadoras</h2>
+        <h2>Tu veterinaria de confianza</h2>
 
-        <p>En Soporte360 encuentras soluciones integrales para todas tus necesidades de tecnología.</p>
+        <p>Cuidamos a tus mascotas con el amor y la dedicación que se merecen. Reserva tu turno de atención médica o estética de manera rápida y sencilla.</p>
 
         <section id="servicios" class="tarjeta">
             <h2>Qué te ofrecemos</h2>
             <ul>
-                <li>Mantenimiento preventivo y limpieza</li>
-                <li>Formateo e instalación de programas</li>
-                <li>Diagnóstico y reparación de hardware</li>
-                <li>Optimización de laptops y PC</li>
+                <li>Atención médica veterinaria</li>
+                <li>Cuidado estético para mascotas</li>
+                <li>Vacunación y desparasitación</li>
+                <li>Exámenes de rutina</li>
             </ul>
         </section>
 
@@ -46,7 +46,7 @@
 
             <h3>Envianos tu consulta</h3>
             
-            <form id="form-contacto" method="POST" action="procesar.php" novalidate>
+            <form id="form-turno" method="POST" action="procesar.php" novalidate>
                 <div class="campo">
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
@@ -58,13 +58,13 @@
                 </div>
 
                 <div class="campo">
-                    <label for="mensaje">Mensaje o consulta:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe la falla de tu equipo..." required></textarea>
+                    <label for="mascota">Contanos de tu mascota:</label>
+                    <textarea id="mascota" name="mascota" rows="4" placeholder="Nombre de la mascota, raza, motivo de consulta..." required></textarea>
                 </div>
 
-                <button type="submit">Enviar mensaje</button>
+                <button type="submit">Reservar mi turno</button>
 
-                <p id="aviso-contacto" class="aviso"></p>
+                <p id="aviso-turno" class="aviso"></p>
             </form>
 
         </section>
