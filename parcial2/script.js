@@ -22,31 +22,31 @@ if (btnHamburger && navMenu) {
 }
 
 // formulario
-const formularioContacto = document.querySelector("#form-turno");
-const avisoContacto = document.querySelector("#aviso-turno");
+const formularioTurno = document.querySelector("#form-turno");
+const avisoTurno = document.querySelector("#aviso-turno");
 
-function revisarContacto(event) {
+function revisarTurno(event) {
     const nombre = document.querySelector("#nombre").value.trim();
     const correo = document.querySelector("#correo").value.trim();
     const mascota = document.querySelector("#mascota").value.trim();
 
     if (nombre === "" || correo === "") {
         event.preventDefault();
-        avisoContacto.textContent = "Nos falta tu nombre y tu correo para darte el turno.";
-        avisoContacto.classList.add("error");
-        avisoContacto.classList.remove("exito");
+        avisoTurno.textContent = "Nos falta tu nombre y tu correo para darte el turno.";
+        avisoTurno.classList.add("error");
+        avisoTurno.classList.remove("exito");
     } else if (correo.includes("@") === false) {
         event.preventDefault();
-        avisoContacto.textContent = "Revisa tu correo - le falta el arroba.";
-        avisoContacto.classList.add("error");
-        avisoContacto.classList.remove("exito");
+        avisoTurno.textContent = "Revisa tu correo - le falta el arroba.";
+        avisoTurno.classList.add("error");
+        avisoTurno.classList.remove("exito");
     } else {
-        avisoContacto.textContent = "Turno reservado - te atiende Marcelo Ruben Mamani Venegas";
-        avisoContacto.classList.add("exito");
-        avisoContacto.classList.remove("error");
+        avisoTurno.textContent = "Turno reservado - te atiende Marcelo Ruben Mamani Venegas";
+        avisoTurno.classList.add("exito");
+        avisoTurno.classList.remove("error");
     }
 }
 
-if (formularioContacto && avisoContacto) {
-    formularioContacto.addEventListener("submit", revisarContacto);
+if (formularioTurno && avisoTurno) {
+    formularioTurno.addEventListener("submit", revisarTurno);
 }
