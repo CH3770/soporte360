@@ -27,6 +27,11 @@
             <input type="number" id="precio" name="precio">
         </div>
 
+        <div>
+            <label for="stock">Cantidad en stock:</label>
+            <input type="number" id="stock" name="stock">
+        </div>
+
         <button type="submit">Registrar juguete</button>
     </form>
 
